@@ -54,6 +54,7 @@ Towards the end, I use this same map to print the header of the table based on t
 
 I also have a `numOfCombinations` counter as a class variable in order to keep track of the number of combinations. 
 
+Lastly, I added some exceptions when the user input is invalid.  
 
 If there are any misunderstandings or if you have problems running the code, please feel free to email me at 
 
