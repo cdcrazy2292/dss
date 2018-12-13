@@ -18,7 +18,7 @@ public class Combinations {
      * @param index:           The index of the current coin in the array of coins.
      * @param coins:           The array with the coin denominations.
      * @param coinCount:       Array that keeps a count of each coin's amount for the combination.
-     *                         <p>
+     *
      *                         The array of coins should be sorted!
      */
 
