@@ -53,8 +53,8 @@ public class Combinations {
         } else { // Last coin
             if (remainingAmount > 0) {
                 int coinValue = coins[index];
-                if (coinValue <= remainingAmount) {
-                    if (remainingAmount % coinValue == 0) {
+                if (coinValue <= remainingAmount) { //If the coin is still less than the amount, we can check if
+                    if (remainingAmount % coinValue == 0) { //it evenly divides to the amount
                         coinCount[index] = remainingAmount / coinValue;
                         printCoinsCombination(coins, coinCount);
                         coinCount[index] = 0;
