@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 public class CombinationsTest {
     Combinations combinations;
@@ -105,6 +106,8 @@ public class CombinationsTest {
             System.out.println(currArr[i]);
         }
 
+        assertArrayEquals(new Double[] {25.0,5.0,10.0}, currArr);
+
     }
 
     @Test
@@ -113,8 +116,9 @@ public class CombinationsTest {
         Double[] currArr = {1.5, 3.0};
         int[] coinCount = new int[currArr.length];
         combinations.findNumberOfCombinations(amount, 0, currArr, coinCount);
+        int result = combinations.getNumOfCombinations();
         System.out.println(combinations.getNumOfCombinations());
-
+        assertEquals(2, result);
     }
 
     @Test
@@ -123,6 +127,19 @@ public class CombinationsTest {
         Double[] currArr = {1.0, 5.0, 25.0, 10.0, 50.0, 150.0};
         int[] coinCount = new int[currArr.length];
         combinations.findNumberOfCombinations(amount, 0, currArr, coinCount);
+        int result = combinations.getNumOfCombinations();
         System.out.println(combinations.getNumOfCombinations());
+        assertEquals(292, result);
+    }
+
+    @Test
+    public void testSimpleInput() {
+        Integer[] testArr = {1,5};
+        int amount = 10;
+        int[] coinCount = new int[testArr.length];
+        combinations.findNumberOfCombinations(amount, 0, testArr, coinCount);
+        int result = combinations.getNumOfCombinations();
+        System.out.println(result);
+        assertEquals(3, result);
     }
 }
